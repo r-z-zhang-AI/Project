@@ -11,7 +11,7 @@ driver.get(url)
 
 result_list = []
 
-for i in range(0, 2):
+for i in range(0, 10):
     element_hds = driver.find_elements(By.CLASS_NAME, 'hd')
     for element_hd in element_hds:
         data_dict = {
