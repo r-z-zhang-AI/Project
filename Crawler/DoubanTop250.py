@@ -1,10 +1,16 @@
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import pandas as pd
-from selenium.webdriver.edge.service import Service
+from selenium.webdriver.chrome.service import Service
+
+# 自动更新 ChromeDriver
+# from webdriver_manager.chrome import ChromeDriverManager
+# service = Service(ChromeDriverManager().install())
+# driver = webdriver.Chrome(service=service)
 
 # 初始化 WebDriver
-driver = webdriver.Edge()
+driver = webdriver.Chrome()
 service = Service()
 url = 'https://movie.douban.com/top250'
 driver.get(url)
