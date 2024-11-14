@@ -55,4 +55,6 @@ df.to_excel('doubanTop250.xlsx', index=False)
 
 # 关闭浏览器
 driver.quit()
+
 # 这时候你可以去吃饭去了，爬这些数据得一段时间了
+print('爬取完成,已生成excel文件')
