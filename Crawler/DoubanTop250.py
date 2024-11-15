@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 import pandas as pd
 from selenium.webdriver.chrome.service import Service
 
-# 自动更新 ChromeDriver
+# # 自动更新 ChromeDriver
 # from webdriver_manager.chrome import ChromeDriverManager
 # service = Service(ChromeDriverManager().install())
 # driver = webdriver.Chrome(service=service)
@@ -16,7 +16,7 @@ driver.get(url)
 
 result_list = []
 
-for i in range(0, 10):
+for i in range(0, 2):
     element_hds = driver.find_elements(By.CLASS_NAME, 'hd')
     for element_hd in element_hds:
         data_dict = {
@@ -47,7 +47,7 @@ for i in range(0, 10):
     next_element_a = next_element.find_element(By.TAG_NAME, 'a')
     next_element_a.click()
 
-print(result_list)
+# print(result_list)
 
 df = pd.DataFrame(result_list)
 
